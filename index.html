@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Simple Login Form</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="script.js"></script>
+  <div class="login-box">
+    <h2>LOGIN NOW</h2>
+
+    <input type="text" placeholder="Username" id="userName">
+    <input type="password" placeholder="Password" id="passWord">
+
+    <div class="buttons">
+      <button class="login-btn" id="loginBtn">Login</button>
+      <button class="reset-btn" type="reset" id="resetBtn">Reset</button>
+    </div> <br>
+    <p class="loginPrint" id="loginPrint"> </p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
