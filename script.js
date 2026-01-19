@@ -1,4 +1,4 @@
-let loginBtn = document.getElementById("loginBtn");
+const loginBtn = document.getElementById("loginBtn");
 
 function validateLogin() {
   let userName = document.getElementById("userName").value.trim();
@@ -34,15 +34,19 @@ function validateLogin() {
   if (!hasUpperCase) {
     loginPrint.textContent = `Add at Leaset One Upper Case Letter in Password!`
     console.log("add one uppercase letter");
+    return;
   } else if (!hasNumber) {
     loginPrint.textContent = `Add At Least One Number in Your Password!`
     console.log("add at least one number");
+    return;
   } else if (!(passWord.includes("@") || passWord.includes("#"))) {
     loginPrint.textContent = `Must Include @ or # in Your Password`;
     console.log(" add @ or #");
+    return;
   } else {
     loginPrint.textContent = `Congrats! Your Password: '${passWord}' is Strong!`
     console.log("strong pass");
+    return;
   }
 
   console.log("Username:", userName);
@@ -50,7 +54,7 @@ function validateLogin() {
 }
 loginBtn.onclick = validateLogin;
 
-let resetBtn = document.getElementById("resetBtn");
+const resetBtn = document.getElementById("resetBtn");
 
 function ResetFunction() {
   let userName = document.getElementById("userName");
@@ -58,6 +62,6 @@ function ResetFunction() {
   let loginPrint = document.getElementById("loginPrint");
   userName.value = "";
   passWord.value = "";
-  loginPrint.textContent = `Feilds Cleared...`;
+  loginPrint.textContent = `Fields Cleared...`;
 }
 resetBtn.onclick = ResetFunction;
